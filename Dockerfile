@@ -8,6 +8,6 @@ RUN tar xzf apache-jmeter-3.3.tgz
 RUN ln -s /apache-jmeter-3.3 /jmeter
 #anyone can edit any properties
 RUN rm -f /jmeter/bin/jmeter.properties
-RUN chown ugo+rw -R /jmeter
+RUN chmod ugo+rw -R /jmeter
 RUN rm -fr /var/lib/apt/lists/*
 CMD [ "/bin/bash", "-l"]
